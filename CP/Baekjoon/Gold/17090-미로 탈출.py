@@ -1,4 +1,5 @@
 import sys
+sys.setrecursionlimit(10**6)
 
 input = sys.stdin.readline
 
@@ -8,7 +9,7 @@ state = [[0] * M for _ in range(N)]
 
 def dfs(x, y):
     if x < 0 or N <= x or y < 0 or M <= y:
-        return False
+        return True
 
     if state[x][y] == 1:
         return False # 이미 방문한 곳
@@ -38,7 +39,7 @@ def dfs(x, y):
 count = 0
 for i in range(N):
     for j in range(M):
-        if dfs[i][j]:
+        if dfs(i, j):
             count += 1
 
 print(count)
