@@ -10,7 +10,7 @@ def bfs(start,find):
     while queue:
         v, d = queue.popleft()
         
-        if v == 
+        if v == find:
             return d
         
         for i, l in graph[v]:
