@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 N = int(input())
 A = list(map(int, input().split()))
-sortA = sorted(A,reverse = False)
+sortA = sorted(A, reverse = False)
 
 P = []
 for i in range(N):
@@ -11,4 +11,4 @@ for i in range(N):
     sortA[sortA.index(A[i])] = -1
 
 for i in range(N):
-    print(str(P[i]),end=' ')
+    print(str(P[i]), end=' ')
